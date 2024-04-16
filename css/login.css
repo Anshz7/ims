@@ -1,0 +1,413 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: url('../images/loginbackground.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+div.loginHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+div.loginHeader h1 {
+  font-size: 100px;
+  color: #eccacb;
+  padding: 0px;
+  margin: 0px;
+  filter: drop-shadow(10px 2px 1px #3b3b3b);
+}
+
+div.loginHeader p {
+  color: #ececec;
+  font-size: 50px;
+  margin: 0;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+div .loginHeader p::after {
+  content: '';
+  display: block;
+  height: 5px;
+  background: #eccacb;
+  margin: 0 auto;
+}
+
+div .loginBody form {
+  margin: 0 auto;
+  width: 450px;
+  background: #3b3b3b;
+  padding: 50px;
+  border: 2px solid #fcfafa;
+  border-radius: 8px;
+}
+
+div .loginInputsContainer {
+  margin-top: 30px;
+}
+
+div .loginInputsContainer label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fcfafa;
+}
+
+div .loginInputsContainer input {
+  height: 30px;
+  width: 100%;
+  border: 2px solid #d40339;
+  font-size: 20px;
+  padding: 5px;
+  text-align: center;
+  font-style: italic;
+}
+
+div .loginButtonContainer {
+  text-align: center;
+}
+
+div .loginButtonContainer button {
+  font-size: 20px;
+  padding: 10px 40px;
+  margin: 30px;
+  background: #eccacb;
+  border: none;
+  color: #fcfafa;
+  outline: none;
+}
+
+div .errorMessage {
+  background-color: #fcfafa;
+  text-align: center;
+  color: red;
+  font-size: 20px;
+  padding: 11px;
+}
+
+/* dashboard */
+
+#dashboardMainContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+div.dashboard_sidebar {
+  width: 20%;
+  background-color: #3b3b3b;
+  height: 100vh;
+}
+
+div.dashboard_content_container {
+  width: 80%;
+  background: #ececec;
+}
+
+h3.dashboard_logo {
+  color: #eccacb;
+  font-size: 60px;
+  text-align: center;
+}
+
+div.dashboard_sidebar_user {
+  text-align: center;
+  position: relative;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #fcfafa;
+}
+
+div.dashboard_sidebar_user img {
+  width: 80px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid #eccacb;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+div.dashboard_sidebar_user span {
+  top: 20%;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fcfafa;
+  display: inline-block;
+}
+
+ul.dashboard_menu_lists {
+  margin-top: 20px;
+}
+
+ul.dashboard_menu_lists li {
+  padding: 15px 15px;
+
+  text-transform: uppercase;
+}
+
+ul.dashboard_menu_lists li a {
+  text-decoration: none;
+  color: #fcfafa;
+  display: block;
+  font-size: 20px;
+}
+
+ul.dashboard_menu_lists li a i {
+  font-size: 25px;
+  padding: 0px 10px 0px 0px;
+}
+
+ul.dashboard_menu_lists li.menuActive {
+  background-color: #eccacb;
+  color: #fcfafa;
+}
+
+ul.dashboard_menu_lists li:hover {
+  background: #eccacb;
+  color: #fcfafa;
+  transition: 0.3s all;
+}
+
+div.dashboard_topNav {
+  background: #fcfafa;
+  padding: 20px;
+}
+
+div.dashboard_topNav a {
+  color: #3b3b3b;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+a#logoutBtn {
+  float: right;
+}
+
+div.dashboard_content {
+  padding: 50px 10px 10px 10px;
+}
+
+div.dashboard_content_main {
+  background: #fcfafa;
+  min-height: 800px;
+  height: 100%;
+}
+
+div#errorMessage {
+  background: rgb(247, 192, 192);
+  text-align: center;
+  color: red;
+  font-size: 20px;
+  padding: 11px;
+}
+
+form::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+form.appForm {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #3b3b3b;
+  border-radius: 5px;
+  background: #ececec;
+}
+
+form label {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+form input.appFormInput {
+  width: 100%;
+  height: 33px;
+  border: 1px solid #3b3b3b;
+  border-radius: 5px;
+}
+
+div.appFormInputContainer {
+  margin-bottom: 15px;
+
+}
+
+form#userAddForm {
+  padding-top: 20px;
+}
+
+div#userAddFormContainer {
+  padding-top: 10px;
+
+}
+
+button.appBtn {
+  background: #eccacb;
+  border: 1px solid #3b3b3b;
+  color: #fcfafa;
+  padding: 10px;
+  margin-top: 20px;
+  float: right;
+}
+
+button.appBtn:hover {
+  transform: scale(1.05);
+  transition: 0.3s all;
+}
+
+p.responseMessage {
+  font-style: 18px;
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+p.responseMessage__error {
+  background: rgb(254, 203, 203);
+}
+
+p.responseMessage__success {
+  background: rgb(203, 254, 203);
+}
+
+div.row {
+  display: flex;
+  font-display: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+div.column {
+  width: 100%;
+  padding: 0px 10px;
+}
+
+div.column-5 {
+  width: 41.67%;
+}
+
+div.column-7 {
+  width: 58.33%;
+}
+
+
+h1.section_header {
+  font-size: 21px;
+  color: #3b3b3b;
+  border-bottom: 1px solid #3b3b3b;
+  padding-bottom: 11px;
+  padding: 10px;
+  border-left: 4px solid #3b3b3b;
+  margin-bottom: 15px;
+}
+
+div table,
+th,
+td {
+  border: 1px solid #ececec;
+  border-collapse: collapse;
+}
+
+table {
+  width: 100%;
+}
+
+table th {
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  background: #eccacb;
+}
+
+table td {
+  font-size: 13px;
+  text-align: center;
+  padding: 5px;
+}
+
+p.userCount{
+  text-align: right;
+  font-size: 15px;
+  font-weight: bold;
+  color: #3b3b3b;
+}
