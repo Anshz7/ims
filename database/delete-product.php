@@ -1,21 +1,22 @@
 <?php
+    
     session_start();
 
-    $table_name = $_SESSION['table'];
-
-    $product_name = $_POST['product_name'];
-    $quantity = $_POST['quantity'];
-    $price = $_POST['price'];
+    $data = $_POST;
+    $product_id = (int) $data['product_id'];
+    $name = $data['product_name'];
 
     try{
-        $command = "INSERT INTO $table_name(product_name, quantity, price) VALUES ('".$product_name."', '".$quantity."', '".$price."')";
+        $command = "DELETE FROM employee WHERE `product`.`product_id` = '{$user_id}'";
     
         include('connection.php');
         $conn->exec($command);
+
         $response = [
             'success' => true,
-            'message' => $product_name . ' Successfully Added to the System'
+            'message' => $name . ' Successfully deleted from the System'
         ];
+
     } catch (PDOException $e){
         $response = [
             'success' => false,
@@ -26,7 +27,4 @@
 
     $_SESSION['response'] = $response;
     header('location: ../product-page.php')
-    
-    
-
 ?>
