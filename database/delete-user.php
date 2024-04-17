@@ -7,7 +7,7 @@
     $name = $data['employee_name'];
 
     try{
-        $command = "DELETE FROM employee WHERE employee_id=13";
+        $command = "DELETE FROM employee WHERE `employee`.`employee_id` = '{$user_id}'";
     
         include('connection.php');
         $conn->exec($command);

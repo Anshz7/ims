@@ -99,14 +99,10 @@
                                                     <td><?= $employee['salary'] ?></td>
                                                     <td><?= $employee['join_year'] ?></td>
                                                     <td>
-                                                        <a href=""> <i class="fa fa-pencil"></i> Edit</a>
                                                         <a href="" class="deleteUser" data-userid = "<?= $employee['employee_id'] ?>" data-name="<?= $employee['employee_name'] ?>" > <i class="fa fa-trash"></i> Delete</a>
                                                     </td>
                                                 </tr>
-                                                <?php } ?>
-
-                                            
-                                                
+                                                <?php } ?> 
                                         </tbody>
                                     </table>
                                 </div>

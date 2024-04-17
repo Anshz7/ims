@@ -14,7 +14,7 @@
                 <a href="./users-add.php"><i class="fa fa-user-plus"></i><span class="menuText">add Employees</span></a>
             </li>
             <li>
-                <a href=""><i class="fa fa-dollar"></i><span class="menuText">Revenue Management</span></a>
+                <a href="./product-add.php"><i class="fa fa-tag"></i><span class="menuText">Add Products</span></a>
             </li>
             <li>
                 <a href=""><i class="fa fa-book"></i><span class="menuText">Accounts Receivable</span></a>

@@ -9,10 +9,9 @@
     $salary = $_POST['salary'];
     $join_year = $_POST['join_year'];
     $password = $_POST['password'];
-    $encrypted = password_hash($password, PASSWORD_DEFAULT);
 
     try{
-        $command = "INSERT INTO $table_name(employee_name, employee_phone, email, salary, join_year, password) VALUES ('".$employee_name."', '".$employee_phone."', '".$email."', '".$salary."', '".$join_year."', '".$encrypted."')";
+        $command = "INSERT INTO $table_name(employee_name, employee_phone, email, salary, join_year, password) VALUES ('".$employee_name."', '".$employee_phone."', '".$email."', '".$salary."', '".$join_year."', '".$password."')";
     
         include('connection.php');
         $conn->exec($command);
