@@ -1,11 +1,13 @@
 <?php
     session_start();
-    if(!isset($_SESSION['product'])) header('location: login.php');
+    if(!isset($_SESSION['product'])) {
+        header('location: login.php');
+        exit(); // Make sure to exit after redirecting
+    }
     $_SESSION['table'] = 'product';
     $employee = $_SESSION['product'];
     $employees = include('database/show-product.php');
     
-
 ?>
 
 <!DOCTYPE html>
